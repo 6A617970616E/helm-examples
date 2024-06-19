@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nexus.homelab.ca:9085/myapp:v2
+  repository: nexus.homelab.ca:9085/myapp
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: v2
 
 nameOverride: ""
 fullnameOverride: ""
