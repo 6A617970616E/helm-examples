@@ -23,13 +23,16 @@ spec:
             - name: SECRET_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: db-user-pass
+                  name: db-user-name
                   key: username
             - name: SECRET_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: db-user-pass
                   key: password
+          envFrom:
+            - configMapRef:
+                name: {{ .Values.configmap.name }}
           ports:
             - name: http
               containerPort: 8080

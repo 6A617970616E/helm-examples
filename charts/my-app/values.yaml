@@ -25,3 +25,9 @@ serviceAccount:
 service:
   type: NodePort
   port: 8080
+
+configmap:
+  name: my-configmap
+  data:
+    key11: url111
+    key12: url222
